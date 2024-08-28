@@ -1271,7 +1271,7 @@ $SETTINGS = array (';
                             PRIMARY KEY (`increment_id`)
                             ) CHARSET=utf8;"
                         );
-                    } else if ($task === 'background_subtasks') {
+                    } elseif ($task === 'background_subtasks') {
                         $mysqli_result = mysqli_query(
                             $dbTmp,
                             "CREATE TABLE IF NOT EXISTS `" . $var['tbl_prefix'] . "background_subtasks` (
@@ -1292,7 +1292,7 @@ $SETTINGS = array (';
                             'ALTER TABLE `' . $var['tbl_prefix'] . 'background_subtasks`
                                 ADD KEY `task_id_idx` (`task_id`);'
                         );
-                    } else if ($task === 'background_tasks') {
+                    } elseif ($task === 'background_tasks') {
                         $mysqli_result = mysqli_query(
                             $dbTmp,
                             "CREATE TABLE IF NOT EXISTS `" . $var['tbl_prefix'] . "background_tasks` (
@@ -1325,7 +1325,7 @@ $SETTINGS = array (';
                             INDEX idx_created_at (`created_at`)
                             ) CHARSET=utf8;"
                         );
-                    } else if ($task === 'ldap_groups_roles') {
+                    } elseif ($task === 'ldap_groups_roles') {
                         $mysqli_result = mysqli_query(
                             $dbTmp,
                             "CREATE TABLE IF NOT EXISTS `" . $var['tbl_prefix'] . "ldap_groups_roles` (
@@ -1337,7 +1337,7 @@ $SETTINGS = array (';
                             KEY `ROLE` (`role_id`)
                             ) CHARSET=utf8;"
                         );
-                    } else if ($task === 'items_otp') {
+                    } elseif ($task === 'items_otp') {
                         $mysqli_result = mysqli_query(
                             $dbTmp,
                             "CREATE TABLE IF NOT EXISTS `" . $var['tbl_prefix'] . "items_otp` (
